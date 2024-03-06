@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="post" style="display: inline-block;">
+    {% csrf_token %}
+    <p style="display: inline-block;"> Are You Sure This Task Is Done ?</p>
+    <button type="submit" class="btn btn-primary" name="submit_button" value="submit">YES </button>
+
+
+</form>
+<a href="{% url 'home' %}" class="btn btn-secondary" style="display: inline-block;">NO</a>
+
+
+
+{% endblock %}
